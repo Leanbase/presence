@@ -1,0 +1,20 @@
+div.footer {
+  background-color: $col-l-gray-3;
+  padding: 20px 0;
+  color: $col-l-gray-1;
+
+  a.logo {
+    display: inline-block;
+    height: 50px;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}

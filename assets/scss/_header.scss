@@ -1,0 +1,40 @@
+.header {
+  padding-top: 10px;
+
+  a.logo {
+    display: inline-block;
+    height: 50px;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .header-links {
+    text-align: right;
+
+    a.header-link {
+      display: inline-block;
+      padding: 10px 20px;
+      color: $col-l-teal;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        color: $col-l-blue;
+        border-bottom: 2px solid $col-l-blue;
+      }
+
+      &.primary {
+        border: 1px solid $col-l-teal;
+        border-radius: 4px;
+
+        &:hover {
+          border-width: 1px;
+          border-color: $col-l-blue;
+        }
+      }
+    }
+  }
+}

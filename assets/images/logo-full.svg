@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="392px" height="108px" viewBox="0 0 392 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>Logo with text</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Logo-with-text" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Leanbase-Textual-Logo" transform="translate(14.000000, 14.000000)">
+            <g id="Leanbase-logo" fill-rule="evenodd" stroke-width="1">
+                <g id="Logo-without-ticks">
+                    <rect id="Rectangle" fill="#009BA3" x="0" y="0" width="81" height="6"></rect>
+                    <polygon id="Rectangle-Copy-2" fill-opacity="0.4" fill="#009BA3" points="11 68 68 68 81 74 0 74"></polygon>
+                    <polygon id="Rectangle-Copy-2" fill-opacity="0.4" fill="#009BA3" transform="translate(40.500000, 9.000000) scale(1, -1) translate(-40.500000, -9.000000) " points="11 6 68 6 81 12 0 12"></polygon>
+                    <polygon id="Rectangle" fill="#59C4FF" transform="translate(56.000000, 23.881957) rotate(-96.000000) translate(-56.000000, -23.881957) " points="37 4.88195681 41.2222222 4.88195681 75 42.8819568 37 9.10417904"></polygon>
+                    <rect id="Rectangle" fill="#009BA3" x="0" y="74" width="81" height="6"></rect>
+                    <path d="M61.661277,13.3759071 C56.1698773,9.295885 49.3668402,6.88195681 42,6.88195681 C23.7746033,6.88195681 9,21.6565601 9,39.8819568 C9,58.1073536 23.7746033,72.8819568 42,72.8819568 C60.2253967,72.8819568 75,58.1073536 75,39.8819568 C75,30.6481051 71.2074821,22.3000434 65.0951328,16.3104581 L61.6961107,20.8816525 C66.8676268,26.2263174 70.05,33.5074956 70.05,41.5319568 C70.05,57.9348139 56.7528571,71.2319568 40.35,71.2319568 C23.9471429,71.2319568 10.65,57.9348139 10.65,41.5319568 C10.65,25.1290997 23.9471429,11.8319568 40.35,11.8319568 C46.8629051,11.8319568 52.8861757,13.9283311 57.781841,17.483109 L61.661277,13.3759071 Z" id="Combined-Shape" fill="#0091FF"></path>
+                </g>
+                <g id="Group" opacity="0.497000558" transform="translate(12.000000, 13.000000)" stroke="#9D9AAD" stroke-linecap="square">
+                    <path d="M29,0.5 L29,10.8819568" id="Line"></path>
+                    <path d="M29,46.5 L29,56.8819568" id="Line"></path>
+                    <path d="M6,23.5 L6,33.8819568" id="Line" transform="translate(6.000000, 28.500000) rotate(-90.000000) translate(-6.000000, -28.500000) "></path>
+                    <path d="M52,23.5 L52,33.8819568" id="Line" transform="translate(52.000000, 28.500000) rotate(-90.000000) translate(-52.000000, -28.500000) "></path>
+                    <path d="M40.5,43.4185843 L40.5,53.8005411" id="Line" transform="translate(40.500000, 48.418584) rotate(150.000000) translate(-40.500000, -48.418584) "></path>
+                    <path d="M17.5,3.58141571 L17.5,13.9633725" id="Line" transform="translate(17.500000, 8.581416) rotate(150.000000) translate(-17.500000, -8.581416) "></path>
+                    <path d="M48.9185843,35 L48.9185843,45.3819568" id="Line" transform="translate(48.918584, 40.000000) rotate(120.000000) translate(-48.918584, -40.000000) "></path>
+                    <path d="M9.08141571,12 L9.08141571,22.3819568" id="Line" transform="translate(9.081416, 17.000000) rotate(120.000000) translate(-9.081416, -17.000000) "></path>
+                    <path d="M9.08141571,35 L9.08141571,45.3819568" id="Line" transform="translate(9.081416, 40.000000) rotate(-120.000000) translate(-9.081416, -40.000000) "></path>
+                    <path d="M48.9185843,12 L48.9185843,22.3819568" id="Line" transform="translate(48.918584, 17.000000) rotate(-120.000000) translate(-48.918584, -17.000000) "></path>
+                    <path d="M17.5,43.4185843 L17.5,53.8005411" id="Line" transform="translate(17.500000, 48.418584) rotate(-150.000000) translate(-17.500000, -48.418584) "></path>
+                    <path d="M40.5,3.58141571 L40.5,13.9633725" id="Line" transform="translate(40.500000, 8.581416) rotate(-150.000000) translate(-40.500000, -8.581416) "></path>
+                </g>
+            </g>
+            <text id="leanbase" font-family="WorkSans-Bold, Work Sans" font-size="62" font-weight="bold" fill="#009BA3">
+                <tspan x="89" y="62">leanbase</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
