@@ -3,7 +3,8 @@ title:
 email:
 author:
 description:
-url:
+url: https://leanbase.io/
+baseUrl: https://leanbase.io/
 
 # Build settings
 permalink: :title/

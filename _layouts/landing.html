@@ -12,7 +12,7 @@
 
     <meta property="og:title" content="{{ page.title | strip_html | strip_newlines | truncate: 160 }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:url" content="https://leanbase.io{{ page.url | replace:'index.html','' }}" />
     <meta property="og:image" content="https://leanbase.io/assets/images/logo-full.svg" />
     <meta property="og:description" content="{{ page.description | strip_html | strip_newlines | truncate: 160  }}"/>
   </head>
