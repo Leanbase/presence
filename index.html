@@ -17,6 +17,10 @@ title: 'Leanbase | Run hundreds of experiments every week.'
   </div>
 </div>
 
+<div class="features-top">
+  <img src="/assets/images/LB-BlueBG-Sec1-top.svg" alt="">
+</div>
+
 <div class="features">
   <div class="container">
     <div class="row">
@@ -53,7 +57,10 @@ title: 'Leanbase | Run hundreds of experiments every week.'
   </div>
 </div>
 
-<div class="targeted-features">
+<div class="targeted-features-top">
+  <img src="/assets/images/LB-TealBG-Sec2-top.svg" alt="">
+</div>
+<div id="targeted-features" class="targeted-features">
   <div class="container">
     <div class="row">
       <div class="col headings">
@@ -62,14 +69,17 @@ title: 'Leanbase | Run hundreds of experiments every week.'
       </div>
     </div>
     <div class="row tabs">
-      <div class="col-md-4 active">
+      <div id="engineering-tab" class="col-md-4 active">
         <a href="javascript:showTargetFeatureTab('engineering');">Engineering Teams</a>
+        <hr/>
       </div>
-      <div class="col-md-4">
+      <div id="growth-tab" class="col-md-4">
         <a href="javascript:showTargetFeatureTab('growth');">Growth Teams</a>
+        <hr/>
       </div>
-      <div class="col-md-4">
+      <div id="product-tab" class="col-md-4">
         <a href="javascript:showTargetFeatureTab('product');">Product Teams</a>
+        <hr/>
       </div>
     </div>
     <div id="engineering" class="row tab-panel">
@@ -101,8 +111,97 @@ title: 'Leanbase | Run hundreds of experiments every week.'
         </div>
       </div>
     </div>
+    <div id="growth" class="row tab-panel inactive">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="feature">
+          <h2>Learn More Every Week</h2>
+          <p class="feature-description">
+            Try out as many variations of your landing page as you would like.
+            Connect to the analytics tools of your choice and learn more about
+            your users and how they convert!
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="feature">
+          <h2>Timeline</h2>
+          <p class="feature-description">
+            Add a comment while closing an experiment. Et Voila! You now have
+            searchable view of what your org. has learnt about growth since
+            you started using Leanbase.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="feature">
+          <h2>Geo-Target Content</h2>
+          <p class="feature-description">
+            Leanbase allows you to show content based on where a user is from.
+            You could show GDPR compliance to traffic from Europe alone, launch
+            a less pricier version in developing countries, and a whole host of
+            other growth tactics.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="product" class="row tab-panel inactive">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="feature">
+          <h2>Conditional Rules</h2>
+          <p class="feature-description">
+              Build fully customized experiences for your cohorts:
+              <ul>
+                <li>Only want a feature released to those who have some other
+                feature? Done.</li>
+                <li>Release only to those who saw a particular message from the
+                growth team? Done!</li>
+              </ul>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="feature">
+          <h2>Early Access</h2>
+          <p class="feature-description">
+            Want to enable a feature for those prized early adopters? They are
+            usually more forgiving of bugs. Get them on the bleeding edge of
+            your product. Upload a list and then manage your Early Access
+            Programme within Leanbase!
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="feature">
+            <h2>Timeline</h2>
+            <p class="feature-description">
+              Add a comment while closing an experiment. Et Voila! You now have
+              searchable view of what your org. has learnt about growth since
+              you started using Leanbase.
+            </p>
+          </div>
+        </div>
+    </div>
   </div>
 </div>
+
+<script>
+  // Handle target feature toggles.
+  (function (win) {
+    win.showTargetFeatureTab = function (tab) {
+      ['engineering', 'growth', 'product'].forEach(function (item) {
+        if (item === tab) {
+          // Show.
+          document.querySelector("#targeted-features #" + item).classList.remove('inactive'); 
+          document.querySelector('#targeted-features #' + item + '-tab').classList.add('active');
+        } else {
+          // Hide.
+          document.querySelector("#targeted-features #" + item).classList.add('inactive'); 
+          document.querySelector('#targeted-features #' + item + '-tab').classList.remove('active');
+        }
+      });
+    };
+  })(window);
+</script>
 
 <div class="second-cta-section">
   <div class="container">
@@ -118,27 +217,88 @@ title: 'Leanbase | Run hundreds of experiments every week.'
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <div class="tab-selector">
-          <ul>
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-          </ul>
+        <div id="screenshots-tab-container" class="tab-container reveal-1">
+          <div class="tab-selector">
+            <ul>
+              <li id="timeline-tab" data-target="timeline" class="tab-anchor"></li>
+              <li id="integration-tab" data-target="integration" class="tab-anchor"></li>
+              <li id="intuitive-tab" data-target="intuitive" class="tab-anchor"></li>
+            </ul>
+          </div>
+          <div class="tab-scroller">
+            <div class="tab" id="shots-tab-1">
+              <h1>Timeline</h1>
+              <p class="screenshot-description">
+                We believe in a high-alignment org. Your engineering, product & growth
+                teams could align better and have a shared knowledge space at leanbase
+                using the Timeline.
+              </p>
+            </div><!--
+         --><div class="tab" id="shots-tab-2">
+              <h1>Integration</h1>
+              <p class="screenshot-description">
+                Integration with leanbase is just a few lines of code. We provide
+                SDKs and APIs for every platform you need.
+              </p>
+            </div><!--
+         --><div class="tab" id="shots-tab-3">
+              <h1>Intuitive</h1>
+              <p class="screenshot-description">
+                Achieve mastery in minutes. Leanbase is easy to understand and
+                navigate. You’ll be experimenting everything in no time!
+              </p>
+            </div>
+          </div>
         </div>
-
-        <h1>Timeline</h1>
-        <p class="screenshot-description">
-          We believe in a high-alignment org. Your engineering, product & growth
-          teams could align better and have a shared knowledge space at leanbase
-          using the Timeline.
-        </p>
       </div>
       <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-        <div class="screenshot">&nbsp;</div>
+        <div id="shot-scroller" class="shot-scroller">
+          <div id="shot-1" class="screenshot">&nbsp;</div><!--
+       --><div id="shot-2" class="screenshot">&nbsp;</div><!--
+       --><div id="shot-3" class="screenshot">&nbsp;</div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+  // Handle screenshots toggle
+  var anchors = Array.from(document.getElementsByClassName('tab-anchor'));
+
+  anchors.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var tabName = tab.getAttribute('data-target');
+
+      // scroll descriptions to appropriate pos.
+      var tabContainer = document.getElementById('screenshots-tab-container');
+      if (tabName === 'timeline') {
+        tabContainer.classList.add('reveal-1');
+        tabContainer.classList.remove('reveal-2');
+        tabContainer.classList.remove('reveal-3');
+      } else if (tabName === 'integration') {
+        tabContainer.classList.remove('reveal-1');
+        tabContainer.classList.add('reveal-2');
+        tabContainer.classList.remove('reveal-3');
+      } else if (tabName === 'intuitive') {
+        tabContainer.classList.remove('reveal-1');
+        tabContainer.classList.remove('reveal-2');
+        tabContainer.classList.add('reveal-3');
+      }
+
+      var shotsScroller = document.getElementById('shot-scroller');
+      if (tabName === 'timeline') {
+        shotsScroller.classList.remove('reveal-2');
+        shotsScroller.classList.remove('reveal-3');
+      } else if (tabName === 'integration') {
+        shotsScroller.classList.add('reveal-2');
+        shotsScroller.classList.remove('reveal-3');
+      } else if (tabName === 'intuitive') {
+        shotsScroller.classList.remove('reveal-2');
+        shotsScroller.classList.add('reveal-3');
+      }
+    })
+  });
+</script>
 
 <div class="third-cta-section">
   <div class="container">
