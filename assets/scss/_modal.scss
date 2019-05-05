@@ -1,0 +1,43 @@
+#modal-sheet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(255, 255, 255, 0.8);
+
+  display: none;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+
+  &.visible {
+    display: initial;
+    opacity: 1.0;
+  }
+}
+
+.modal {
+  display: none;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+
+  &.visible {
+    display: flex;
+    opacity: 1.0;
+  }
+}
+
+.centered-modal {
+  position: fixed;
+  top: 50vh; left: 50vw;
+  width: 0px; height: 0px;
+  overflow: visible;
+  
+  align-items: center;
+  justify-content: center;
+
+  > div.modal-content {
+    flex: 1 0 auto;
+  }
+}

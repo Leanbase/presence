@@ -1,0 +1,52 @@
+<div id="modal-sheet">
+</div>
+
+<script>
+  (function (win) {
+    function _intHideVisibleModals() {
+      var visibleModals = Array.from(document.querySelectorAll('.modal.visible'));
+      visibleModals.forEach(function (modalEl) {
+        modalEl.classList.remove('visible');
+      });
+    }
+
+    function showModal(modalId) {
+      document.getElementById('modal-sheet').classList.add('visible');
+      _intHideVisibleModals();
+
+      document.querySelector('.modal#' + modalId).classList.add('visible');
+    }
+
+    function hideAll() {
+      document.getElementById('modal-sheet').classList.remove('visible');
+      _intHideVisibleModals();
+    }
+
+    // Clicks on modal sheet should shut down all modals.
+    document.getElementById('modal-sheet').addEventListener('click', hideAll);
+
+    window.addEventListener('keydown', function (e) {
+      // Escape key should shut down all modals.
+      if (e.key === 'Escape') {
+        hideAll();
+      }
+    });
+
+    window.addEventListener('load', function () {
+      console.info('Page has loaded, will configure modals now');
+      var allModals = Array.from(document.querySelectorAll('.modal'));
+      allModals.forEach(function (modalEl) {
+        console.log('Configuring: ' + modalEl.getAttribute('id'));
+        modalEl.addEventListener('click', function (e) {
+          // Clicks on modals should not shut it down automatically.
+          e.stopPropagation();
+        });
+      });
+    })
+
+    win.modals = {
+      show: showModal,
+      hide: hideAll
+    };
+  })(window);
+</script>
