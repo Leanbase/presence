@@ -9,24 +9,29 @@ body {
 }
 
 .blog-header {
-  .container {
+  z-index: 10;
+  
+  .container .whiteout {
     background-color: white;
+    height: 100px;
   }
 
   a.logo {
     text-decoration: none;
     display: block;
-    padding: 32px 0;
+    height: 100px;
 
     img {
       width: 249px;
       height: 47px;
+
+      margin-top: calc(50px - 47px/2);
     }
   }
 
   .header-links {
     text-align: right;
-    margin-top: 20px;
+    padding-top: 26px;
 
     a.header-link {
       display: inline-block;
@@ -138,9 +143,8 @@ a.link-to-post {
 }
 
 .blog-post {
-  position: absolute;
-  top: 0; left: 0;
-  z-index: -1;
+  margin-top: -111px;
+  z-index: 1;
 
   div.splash {
     width: 100vw; height: 100vh;
