@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+
+    {% include analytics.html %}
+
+    <link rel="stylesheet" href="/assets/css/bootstrap-grid.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/scss/blog.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <meta property="og:title" content="{{ page.title | strip_html | strip_newlines | truncate: 160 }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://leanbase.io{{ page.url | replace:'index.html','' }}" />
+    <meta property="og:image" content="https://leanbase.io/assets/images/logo-with-text-square.png" />
+    <meta property="og:description" content="{{ page.description | strip_html | strip_newlines | truncate: 160  }}"/>
+  </head>
+  <body>
+    {% include blog-header.html %}
+
+    {{ content }}
+  </body>
+</html>

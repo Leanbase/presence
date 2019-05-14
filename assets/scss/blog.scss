@@ -1,0 +1,122 @@
+---
+---
+@import 'colors';
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom: 15em;
+}
+
+.blog-header {
+  a.logo {
+    text-decoration: none;
+    display: block;
+    padding: 16px 0 32px;
+
+    img {
+      width: 249px;
+      height: 47px;
+    }
+  }
+
+  .header-links {
+    text-align: right;
+    margin-top: 20px;
+
+    a.header-link {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: $col-l-teal;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        color: $col-l-blue;
+        border-bottom: 2px solid $col-l-blue;
+      }
+    }
+  }
+}
+
+p.author {
+  // Common for author occurence everywhere..
+  color: $col-l-gray-3;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  margin: 0;
+
+  &:before {
+    content: 'by ';
+    text-transform: none;
+  }
+}
+
+.blog-index-hero {
+  div.hero-image  {
+    background-color: $col-l-gray-1;
+    width: 100%;
+    padding-top: calc(900% / 16); // Aspect-ratio
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  h1.hero {
+    color: $col-l-gray-3;
+    font-family: "Work Sans";
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    margin-bottom: 32px;
+  }
+
+  p.hero-desc {
+    margin-bottom: 32px;
+    color: $col-l-gray-3;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.blog-recent-posts {
+  h1 {
+    color: $col-l-gray-3;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-top: 0px;
+  }
+
+  div.post-block {
+    display: flex;
+    align-items: flex-start;
+
+    div.thumb {
+      flex: 0 0 35%;
+      margin-right: 5%;
+
+      background-color: $col-l-gray-1;
+      width: 100%;
+      padding-top: calc(900% * 0.4 / 8); // Aspect-ratio
+
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    div.nameplate {
+      flex: 1 1 auto;
+
+      h1 {
+        color: $col-l-gray-3;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
