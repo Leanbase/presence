@@ -4,13 +4,13 @@
 @import 'header';
 @import 'footer';
 @import 'modal';
-@import 'signup-modal';
+@import 'signup-slideout';
 
 @mixin pretty-signup-form {
   .signup-form {
     text-align: center;
 
-    input[type=email], input[type=submit] {
+    input[type=email], input[type=button].submit {
       font-size: 16px;
       border-radius: 4px;
       border: 2px solid $col-l-blue;
@@ -31,7 +31,7 @@
       }
     }
 
-    input[type=submit] {
+    input[type=button].submit {
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
       color: white;
@@ -47,14 +47,14 @@
 
 
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Muli', Arial, Helvetica, sans-serif;
 }
 
 div.hero {
   h1.hero-header {
     font-size: 48px;
     color: $col-l-teal;
-    font-weight: 500;
+    font-weight: 900;
     margin: 0;
 
     margin: 100px 0;

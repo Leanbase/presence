@@ -1,6 +1,24 @@
 <div class="signup-form">
   <form>
-    <input type="email" placeholder="name@workplace.com"><!--
- --><input type="submit" value="Signup">
+    <input type="email" autocomplete="email" name="email" placeholder="name@workplace.com" oninput="handleSignupInputChange(event)"><!--
+ --><input type="button" class="submit" value="Signup" onclick="handleSignupClick(event)">
   </form>
 </div>
+<script>
+  (function (win) {
+    if (win.handleSignupInputChange) {
+      return;
+    }
+
+    win.handleSignupInputChange = function (e) {
+      if (e.target.value !== "") {
+        win.slideSignupIn(e.target.value);
+      }
+    }
+
+    win.handleSignupClick = function (e) {
+      var value = e.target.previousElementSibling.value;
+      win.slideSignupIn(value);
+    }
+  })(window);
+</script>

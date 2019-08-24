@@ -1,0 +1,51 @@
+<div id="signup-slideout" class="slideout">
+  <div class="panel">
+    <a href="javascript:slideSignupOut();" class="close">x</a>
+
+    <h1>Let's create your account on Leanbase</h1>
+
+    <form>
+      <label for="signup-slideout-email">Work email</label>
+      <input type="text" name="email" id="signup-slideout-email"/>
+      <button class="form-cta">Signup</button>
+      <p class="subtext">We'll send you an email later to set a password or
+      connect your Slack/Google account.</p>
+    </form>
+
+    <div class="bottom-alternate">
+      <p>Already have an account with us?</p>
+      <p><a href="/login">Login instead?</a></p>
+    </div>
+  </div>
+</div>
+<script>
+  (function (win) {
+    window.slideSignupIn = function (value) {
+      var el = document.getElementById('signup-slideout');
+      
+      el.classList.add('show');
+
+      el.offsetHeight; // Force rerender
+
+      el.classList.add('unveil');
+
+      var input = document.getElementById("signup-slideout-email");
+
+      if (value) {
+        input.value = value;
+      }
+
+      input.focus();
+    }
+
+    window.slideSignupOut = function () {
+      var el = document.getElementById('signup-slideout');
+      
+      el.classList.remove('unveil');
+
+      el.offsetHeight; // Force rerender
+
+      el.classList.remove('show');
+    }
+  })(window);
+</script>

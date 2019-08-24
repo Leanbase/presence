@@ -1,0 +1,106 @@
+.slideout {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+
+  color: $col-l-gray-3;
+  background: rgba(0, 0, 0, 0.7);
+
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+
+  &.show {
+    display: unset;
+  }
+
+  &.unveil {
+    opacity: 1.0;
+  }
+
+  a.close {    
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .panel {
+    position: fixed;
+    right: 0; top: 0;
+
+    background: white;
+    height: 100vh; width: 550px;
+    padding: 96px 48px;
+
+    h1 {
+      margin: 0 0 60px 0;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    form {
+      label {
+        display: block;
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0 0 4px 0;
+        padding: 0;
+      }
+
+      input {
+        width: 100%;
+        border: 1px solid #979797;
+        font-size: 20px;
+        padding: 12px 9px;
+      }
+
+      .form-cta {
+        margin: 32px 0;
+        padding: 16px 64px;
+        background-color: $col-l-teal;
+        color: white;
+        box-shadow: 0 10px 20px -10px rgba(0,155,163,0.5);
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+
+        transition: background-color 0.15s ease-out;
+
+        &:hover {
+          background-color: lighten($color: $col-l-teal, $amount: 30);
+        }
+      }
+
+      p.subtext {
+        margin: 0;
+        color: $col-l-gray-2;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    
+    div.bottom-alternate {
+      position: fixed;
+      bottom: 96px; right: 48px;
+      width: calc(550px - 48px - 48px);
+      font-size: 20px;
+      line-height: 36px;
+
+      p {
+        color: $col-l-gray-2;
+        margin: 0;
+
+        a {
+          color: $col-l-teal;
+        }
+      }
+    }
+  }
+}
+

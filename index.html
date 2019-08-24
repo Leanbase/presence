@@ -1,18 +1,18 @@
 ---
 layout: landing
-title: 'Leanbase | Effortless online experimentation.'
-description: Run hundreds of experiments every week. Learn more, faster.
+title: 'Leanbase | Effortless feature flagging.'
+description: Accelerate your product development with Continuous Delivery.
 ---
 
 <div class="hero">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-        <h1 class="hero-header">Run hundreds of experiments every week. Learn more, faster.</h1>
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <h1 class="hero-header">Accelerate your product development with Continuous Delivery.</h1>
 
         {% include signup.html %}
       </div>
-      <div class="has-hero-illustration col-lg-7 col-md-7 col-sm-12 col-xs-12">
+      <div class="does-not-has-hero-illustration col-lg-4 col-md-4 col-sm-12 col-xs-12">
       </div>
     </div>
   </div>
@@ -27,11 +27,10 @@ description: Run hundreds of experiments every week. Learn more, faster.
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <div class="feature">
-          <h2>Confidently Run multivariate experiments</h2>
+          <h2>Test features on production</h2>
           <p class="feature-description">
-            Our statistical engine computes the *reach* of your experiment based
-            on historical data and ensures that your sample is statistically
-            significant.
+            Use features exactly like your users would and just turn on a switch
+            when you are ready.
           </p>
         </div>
       </div>
@@ -66,15 +65,15 @@ description: Run hundreds of experiments every week. Learn more, faster.
     <div class="row">
       <div class="col headings">
         <h1>Feature Management that works for all</h1>
-        <p>Empower all your teams with experiments at scale.</p>
+        <p>Empower all your teams with control at scale.</p>
       </div>
     </div>
     <div class="row tabs">
-      <div id="engineering-tab" class="col-md-4 active">
+      <div id="engineering-tab" class="col-md-4 col-md-offset-2 active">
         <a href="javascript:showTargetFeatureTab('engineering');">Engineering Teams</a>
         <hr/>
       </div>
-      <div id="growth-tab" class="col-md-4">
+      <div id="growth-tab" class="col-md-4" style="display:none;">
         <a href="javascript:showTargetFeatureTab('growth');">Growth Teams</a>
         <hr/>
       </div>
@@ -95,7 +94,7 @@ description: Run hundreds of experiments every week. Learn more, faster.
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <div class="feature">
-          <h2>Controlled Rollout</h2>
+          <h2>Phased Rollout</h2>
           <p class="feature-description">
             Rolling deploy of flag changes across your user-base so that you are
             sure your infrastructure can hold up.
@@ -313,4 +312,4 @@ description: Run hundreds of experiments every week. Learn more, faster.
 </div>
 
 {% include modal.html %}
-{% include signup_modal.html %}
+{% include signup_slideout.html %}
