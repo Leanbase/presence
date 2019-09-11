@@ -2,6 +2,7 @@
 ---
 @import 'colors';
 
+$disp-font-family: 'Cormorant Garamond', georgia;
 $base-font-family: 'PT Serif', georgia;
 $sans-font-family: 'Nunito Sans', arial;
 $base-font-size:   20px !default;
@@ -108,7 +109,7 @@ div.blog-article {
     margin-bottom: 60px;
     
     h1 {
-      font-family: 'Cormorant Garamond';
+      font-family: $disp-font-family;
       font-size: 48px;
       font-weight: 300;
       color: #212121;
@@ -118,7 +119,6 @@ div.blog-article {
 
   div.hero {
     margin-bottom: 20px;
-    padding-top: 20%;
     background-size: cover;
   }
 
@@ -157,7 +157,8 @@ div.author-block {
     &:before {
       display: inline-block;
       content: '';
-      height: 42px; width: 1px;
+      height: 3.5em; width: 1px;
+      vertical-align: middle;
     }
   }
 
@@ -188,12 +189,42 @@ div.author-block {
   }
 
   p.name {
-    font-size: 24px;
+    font-size: 1.25em;
     margin-bottom: 0px;
   }
 
   p.bio {
-    font-size: 16px;
+    font-size: 0.75em;
     color: $col-l-gray-2;
+  }
+}
+
+div.blog-index {
+  margin-top: 20px;
+
+  div.hero {
+    margin-bottom: 8px;
+    background-size: cover;
+  }
+
+  a.link-to-post {
+    font-size: 14px;
+    color: $text-color;
+    font-family: $sans-font-family;
+    line-height: 1.25em;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    font-family: $disp-font-family;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    font-weight: 300;
+
+    margin-top: 0em;
+    color: #212121;
   }
 }

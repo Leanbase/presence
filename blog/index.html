@@ -3,21 +3,32 @@ layout: blog-base
 title: 'Continuous by Leanbase | Your guide to Effortless online experimentation.'
 description: Run hundreds of experiments every week. Learn more, faster.
 ---
-<div class="container">
+<div class="container blog-index">
   <div class="row">
-    <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12 blog-index-hero">
-      {% for post in site.posts limit:1 %}
+    <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 blog-index-hero">
+      {% for post in site.posts limit: 1 %}
         <a class="link-to-post" href="{{ post.url }}">
-          <div class="hero-image" style="background-image: url('{{ post.index_hero }}');">
+          <div class="hero" style="background-image: url('{{ post.hero }}'); padding-top: {{ post.hero_aspect }};"></div>
+          <h1>{{ post.title }}</h1>
+          <div class="author-block container-fluid">
+            <div class="row">
+              <div class="contains-thumb col-xs-2">
+                <span class="author-thumb">
+                  <span style="background-image: url('{{ post.author_thumb }}')"/>
+                </span>
+              </div>
+              <div class="col-xs-10">
+                <p class="name">{{ post.author }}</p>
+                <p class="bio">{{ post.author_bio }}</p>
+              </div>
+            </div>
           </div>
-          <h1 class="hero">{{ post.title }}</h1>
-          <p class="hero-desc">{{ post.description }}</p>
-          <p class="author">{{ post.author }}</p>
+          {{ post.excerpt }}
         </a>
       {% endfor %}
     </div>
     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 blog-recent-posts">
-      <h1>Recent Posts</h1>
+      <!-- <h1>Recent Posts</h1> -->
       {% for post in site.posts offset:1 %}
         <a class="link-to-post" href="{{ post.url }}">
           <div class="post-block">
