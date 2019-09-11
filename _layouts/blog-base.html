@@ -8,7 +8,7 @@
     {% include analytics.html %}
 
     <link rel="stylesheet" href="/assets/css/bootstrap-grid.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|PT+Serif:300,400|Nunito+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|PT+Serif:400|Nunito+Sans:400" rel="stylesheet">
     <link rel="stylesheet" href="/assets/scss/blog.css">
     <link rel="icon" href="/favicon.png" type="image/png">
 
@@ -20,6 +20,7 @@
   </head>
   <body class="blog">
     {% include blog-header.html %}
+    {% include blog-mailchimp-form.html %}
 
     {{ content }}
 
