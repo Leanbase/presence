@@ -5,7 +5,7 @@ description: Run hundreds of experiments every week. Learn more, faster.
 ---
 <div class="container blog-index">
   <div class="row">
-    <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 blog-index-hero">
+    <div class="col-md-4 col-xs-12 blog-index-hero">
       {% for post in site.posts limit: 1 %}
         <a class="link-to-post" href="{{ post.url }}">
           <div class="hero" style="background-image: url('{{ post.hero }}'); padding-top: {{ post.hero_aspect }};"></div>
@@ -27,7 +27,7 @@ description: Run hundreds of experiments every week. Learn more, faster.
         </a>
       {% endfor %}
     </div>
-    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 blog-recent-posts">
+    <div class="col-md-4 col-xs-12 blog-recent-posts">
       <!-- <h1>Recent Posts</h1> -->
       {% for post in site.posts offset:1 %}
         <a class="link-to-post" href="{{ post.url }}">
