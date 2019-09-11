@@ -2,170 +2,136 @@
 ---
 @import 'colors';
 
-body {
-  font-family: 'Work Sans', sans-serif;
-  margin-bottom: 15em;
-  color: $col-l-gray-3;
+$base-font-family: 'PT Serif', georgia;
+$sans-font-family: 'Nunito Sans', arial;
+$base-font-size:   20px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$text-color: $col-l-gray-3-80;
+$background-color: #ffffff;
+$brand-color: $col-l-teal;
+$grey-color: $col-l-gray-2;
+$grey-color-light: $col-l-gray-1;
+
+$spacing-unit:     32px !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+$on-medium:        $on-palm !default;
+$on-large:         $on-laptop !default;
+
+// Notice the following mixin uses max-width, in a deprecated, desktop-first
+// approach, whereas media queries used elsewhere now use min-width.
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
-.blog-header {
-  z-index: 10;
-  
-  .container .whiteout {
-    background-color: white;
-    height: 100px;
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+@import 'blog-reset';
+
+div.blog-header {
+  width: 100%;
+  height: 48px;
+  background-color: $col-l-teal;
+
+  a {
+    color: white;
   }
 
   a.logo {
-    text-decoration: none;
-    display: block;
-    height: 100px;
+    display: inline-block;
+    padding: 12px 0;
+    font-size: 24px; line-height: 24px;
 
-    img {
-      width: 249px;
-      height: 47px;
-
-      margin-top: calc(50px - 47px/2);
-    }
-  }
-
-  .header-links {
-    text-align: right;
-    padding-top: 26px;
-
-    a.header-link {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 16px;
-      color: $col-l-teal;
+    &:hover {
       text-decoration: none;
-      border-bottom: 2px solid transparent;
-
-      &:hover {
-        color: $col-l-blue;
-        border-bottom: 2px solid $col-l-blue;
-      }
     }
   }
-}
 
-p.author {
-  // Common for author occurence everywhere..
-  color: $col-l-gray-3;
-  font-size: 16px;
-  line-height: 19px;
-  text-transform: uppercase;
-  margin: 0;
+  div.header-links {
+    a {
+      display: inline-block;
+      font-family: $sans-font-family;
+      font-size: 16px; line-height: 16px;
+      padding: 16px 0;
+      margin-left: 12px;
 
-  &:before {
-    content: 'by ';
-    text-transform: none;
+      font-weight: 600;
+    }
+  }
+
+  .text-right {
+    text-align: right;
   }
 }
 
-a.link-to-post {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-
+div.blog-article {
+  .title-cell {
+    margin-top: 120px;
+    
     h1 {
-      text-decoration: underline;
+      font-family: 'Cormorant Garamond';
+      font-size: 48px;
+      font-weight: 300;
+      color: #212121;
+    }
+  }
+
+  div.article-block {
+    margin-top: 20px;
+
+    p.date {
+      font-family: $sans-font-family;
+      color: $col-l-gray-2;
+      font-size: 16px;
+    }
+
+    hr {
+      margin: 20px 0;
     }
   }
 }
 
-.blog-index-hero {
-  div.hero-image  {
-    background-color: $col-l-gray-1;
-    width: 100%;
-    padding-top: calc(900% / 16); // Aspect-ratio
-
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+div.author-block {
+  div.contains-thumb {
+    text-align: right;
   }
 
-  h1.hero {
-    color: $col-l-gray-3;
-    font-family: "Work Sans";
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 64px;
-    margin-bottom: 32px;
+  span.author-thumb {
+    display: inline-block;
+    width: 80px; height: 80px;
+    border-radius: 40px;
+
+    background-position: center;
+    background-size: contain;
+
+    background-color: $col-l-gray-2;
+    border: 1px solid $col-l-gray-1;
+    box-shadow: inset 0 0 1px 1px white;
   }
 
-  p.hero-desc {
-    margin-bottom: 32px;
-    color: $col-l-gray-3;
-    font-size: 18px;
-    line-height: 27px;
+  p.name, p.bio {
+    font-family: $sans-font-family;
   }
-}
 
-.blog-recent-posts {
-  h1 {
-    color: $col-l-gray-3;
+  p.name {
     font-size: 24px;
-    line-height: 28px;
-    font-weight: 500;
-    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
-  div.post-block {
-    display: flex;
-    align-items: flex-start;
-
-    div.thumb {
-      flex: 0 0 35%;
-      margin-right: 5%;
-
-      background-color: $col-l-gray-1;
-      width: 100%;
-      padding-top: calc(900% * 0.4 / 8); // Aspect-ratio
-
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    div.nameplate {
-      flex: 1 1 auto;
-
-      h1 {
-        color: $col-l-gray-3;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 28px;
-      }
-    }
-  }
-}
-
-.blog-post {
-  margin-top: -100px;
-  z-index: 1;
-
-  div.splash {
-    width: 100vw; height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  div.post-start {
-    margin-top: -180px;
-
-    .has-content {
-      background-color: white;
-      padding: 15px 30px 0px 30px;
-    }
-  }
-
-  .blog-text {
-    font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
-    font-size: 18px;
-    line-height: 30px;
-    color: $col-l-gray-3;
+  p.bio {
+    font-size: 16px;
+    color: $col-l-gray-2;
   }
 }

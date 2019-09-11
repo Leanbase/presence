@@ -7,6 +7,7 @@ url: https://leanbase.io/
 baseUrl: https://leanbase.io/
 
 # Build settings
-permalink: :title/
+include: ['_posts']
+permalink: /blog/:title/
 sass:
   sass_dir: assets/scss

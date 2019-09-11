@@ -8,9 +8,9 @@
     {% include analytics.html %}
 
     <link rel="stylesheet" href="/assets/css/bootstrap-grid.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700|Source+Serif+Pro:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300|PT+Serif:300,400|Nunito+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="/assets/scss/blog.css">
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="/favicon.png" type="image/png">
 
     <meta property="og:title" content="{{ page.title | strip_html | strip_newlines | truncate: 160 }}" />
     <meta property="og:type" content="website" />
@@ -18,7 +18,7 @@
     <meta property="og:image" content="https://leanbase.io/assets/images/logo-with-text-square.png" />
     <meta property="og:description" content="{{ page.description | strip_html | strip_newlines | truncate: 160  }}"/>
   </head>
-  <body>
+  <body class="blog">
     {% include blog-header.html %}
 
     {{ content }}
