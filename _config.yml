@@ -3,7 +3,7 @@ title:
 email:
 author:
 description:
-url: https://leanbase.io/
+url: https://leanbase.io
 baseUrl: https://leanbase.io/
 
 # Build settings
@@ -11,3 +11,6 @@ include: ['_posts']
 permalink: /blog/:title/
 sass:
   sass_dir: assets/scss
+
+plugins:
+  - jekyll-sitemap
