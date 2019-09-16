@@ -1,6 +1,6 @@
 ---
 layout: blog-page
-title: Large feedback cycles are bad for you. Even medium ones are not great. 
+title: "Large feedback cycles: They are bad for you."
 hero: /assets/blog-images/chris-yates-bVG0-KSh8Sc-unsplash.jpg
 hero_aspect: 50%
 author: Dipanjan Mukherjee
