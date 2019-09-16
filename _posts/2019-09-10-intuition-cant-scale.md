@@ -2,7 +2,7 @@
 layout: blog-page
 title: Why intuition can't scale and you need to turn to experiments instead.
 hero: /assets/blog-images/adult-blond-hair-blurred-background-1536870.jpg
-hero_aspect: 40%
+hero_aspect: 65%
 author: Dipanjan Mukherjee
 author_bio: Staff Writer, Founder at Leanbase
 author_thumb: /assets/blog-images/authors/dipanjan.jpg
