@@ -27,8 +27,28 @@ description: Run hundreds of experiments every week. Learn more, faster.
         </a>
       </div>
     {% endfor %}
-    <div class="col-md-4 col-xs-12 blog-recent-posts">
-      <!-- <h1>Recent Posts</h1> -->
+    <div class="col-md-4 col-xs-12 offshore-index">
+      <h1 class="section-heading">Elsewhere on the web</h1>
+      {% for article in site.offshore_articles reversed %}
+      <a href="{{ article.link }}">
+        <div class="offshore-article">
+          <span class="date">
+            <div class="day">{{ article.date | date: '%d' }}</div>
+            <div class="month">{{ article.date | date: '%b' }}</div>
+          </span>
+          <span class="content">
+            <h1 class="title">{{ article.title }}</h1>
+            <h2 class="source">{{ article.authors }} in {{ article.source }}</h2>
+          </span>
+        </div>
+      </a>
+
+      {% endfor %}
+    </div>
+
+
+    <!-- <div class="col-md-4 col-xs-12 blog-recent-posts">
+      <h1>Recent Posts</h1>
       {% for post in site.posts offset:2 %}
         <a class="link-to-post" href="{{ post.url }}">
           <div class="post-block">
@@ -41,6 +61,6 @@ description: Run hundreds of experiments every week. Learn more, faster.
           </div>
         </a>
       {% endfor %}
-    </div>
+    </div> -->
   </div>
 </div>

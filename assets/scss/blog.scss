@@ -250,6 +250,84 @@ div.blog-index {
   }
 }
 
+div.offshore-index {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h1.section-heading {
+    color: $col-l-blue;
+    font-size: 14px;
+    font-family: $sans-font-family;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  p.section-description {
+    margin: 0;
+    font-size: 14px;
+    font-family: $sans-font-family;
+  }
+
+  div.offshore-article {
+    display: flex;
+    padding: 8px 0;
+    border-bottom: 1px solid $col-l-gray-1-20;
+
+    &:first-child {
+      padding-top: 0px;
+    }
+
+    span.date {
+      flex: 0 0 auto;
+      display: inline-block;
+
+      text-align: center;
+      font-family: $sans-font-family;
+      font-weight: 700;
+      padding: 0 20px 0 0;
+      align-self: center;
+
+      div.day {
+        font-size: 24px;
+        color: $col-l-teal;
+      }
+
+      div.month {
+        font-size: 14px;
+        color: $col-l-gray-2;
+        text-transform: uppercase;
+        margin-top: -4px;
+      }
+    }
+
+    span.content {
+      flex: 1 1 auto;
+      display: inline-block;
+
+      h1.title {
+        font-family: $base-font-family;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      h2.source {
+        font-family: $sans-font-family;
+        font-weight: 400;
+        font-size: 14px;
+        margin: 0;
+        color: $col-l-gray-2;
+      }
+    }
+  }
+}
+
 div.footnotes {
   font-size: 0.75em;
   margin-top: 20em;

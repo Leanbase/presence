@@ -14,3 +14,6 @@ sass:
 
 plugins:
   - jekyll-sitemap
+
+collections:
+  - offshore_articles
