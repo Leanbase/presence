@@ -7,13 +7,22 @@ url: https://leanbase.io
 baseUrl: https://leanbase.io/
 
 # Build settings
-include: ['_posts']
 permalink: /blog/:title/
 sass:
   sass_dir: assets/scss
 
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 collections:
   - offshore_articles
+
+# SEO Stuff
+
+social:
+  name: LeanbaseHQ
+  links:
+    - https://twitter.com/LeanbaseHQ
+
+logo: /assets/images/logo-with-text-square.png
