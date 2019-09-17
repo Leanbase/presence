@@ -89,6 +89,23 @@ div.blog-header {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
 }
 
+div#breadcrumbs {
+  font-family: $sans-font-family;
+  color: $col-l-gray-1-50;
+  font-size: 0.65em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  
+  a {
+    color: $col-l-gray-1-50;
+
+    &:hover {
+      color: $col-l-teal;
+      text-decoration: none;
+    }
+  }
+}
+
 div.blog-footer {
   width: 100%;
   margin-top: 120px;
