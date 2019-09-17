@@ -34,7 +34,7 @@ description: Run hundreds of experiments every week. Learn more, faster.
     <div class="col-md-4 col-xs-12 offshore-index">
       <h1 class="section-heading">Elsewhere on the web</h1>
       {% for article in site.offshore_articles reversed %}
-      <a href="{{ article.link }}">
+      <a href="{{ article.link }}" target="1">
         <div class="offshore-article">
           <span class="date">
             <div class="day">{{ article.date | date: '%d' }}</div>
