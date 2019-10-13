@@ -1,8 +1,4 @@
 # Site settings
-title:
-email:
-author:
-description:
 url: https://leanbase.io
 baseUrl: https://leanbase.io/
 
@@ -19,6 +15,9 @@ collections:
   - offshore_articles
 
 # SEO Stuff
+twitter:
+  username: LeanbaseHQ
+  card: summary
 
 social:
   name: LeanbaseHQ
@@ -26,3 +25,6 @@ social:
     - https://twitter.com/LeanbaseHQ
 
 logo: /assets/images/logo-with-text-square.png
+title: Leanbase | Feature Flagging for Faster Testing and Continous Delivery.
+description: Modern product teams are delivering faster by using Feature Flagging practices. Untangle code deployments from feature releases and build better software safely. Use Leanbase to power your feature flags at any scale.
+locale: en_US
