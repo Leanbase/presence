@@ -107,16 +107,41 @@ div#breadcrumbs {
 }
 
 div.blog-footer {
+  font-family: $sans-font-family;
   width: 100%;
-  margin-top: 120px;
-  padding: 20px 0 80px;
-  background-color: $col-l-teal;
-  color: white;
+  margin-top: 200px;
+  padding: 20px 0;
+  color: $grey-color;
+
+  box-shadow: 0 0 120px 120px #009ba309;
   font-size: 14px;
 
   a {
-    color: white;
-    text-decoration: underline;
+    text-decoration: none;
+    color: $col-l-teal;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style-type: none;
+      margin: 0; padding: 0;
+
+      a {
+        display: inline-block;
+        padding: 0.15em 1em;
+      }
+    }
   }
 }
 
@@ -295,6 +320,7 @@ div.offshore-index {
     display: flex;
     padding: 8px 0;
     border-bottom: 1px solid $col-l-gray-1-20;
+    align-items: center;
 
     &:first-child {
       padding-top: 0px;
@@ -308,7 +334,6 @@ div.offshore-index {
       font-family: $sans-font-family;
       font-weight: 700;
       padding: 0 20px 0 0;
-      align-self: center;
 
       div.day {
         font-size: 24px;
