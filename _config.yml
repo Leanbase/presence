@@ -17,14 +17,9 @@ collections:
 # SEO Stuff
 twitter:
   username: LeanbaseHQ
-  card: summary
-
-social:
-  name: LeanbaseHQ
-  links:
-    - https://twitter.com/LeanbaseHQ
+  card: summary_large_image
 
 logo: /assets/images/logo-with-text-square.png
-title: Leanbase | Feature Flagging for Faster Testing and Continous Delivery.
+title: Leanbase
 description: Modern product teams are delivering faster by using Feature Flagging practices. Untangle code deployments from feature releases and build better software safely. Use Leanbase to power your feature flags at any scale.
 locale: en_US
