@@ -10,12 +10,13 @@ layout: blog-base
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 col-xs-12 col-sm-12 hero" style="background-image: url('{{ page.hero }}'); padding-top: {{ page.hero_aspect }};">
+      <div class="col-md-12 col-xs-12 col-sm-12 hero"
+        style="background-image: url('{{ page.hero }}'); padding-top: {{ page.hero_aspect }};">
       </div>
     </div>
     <div class="row author-block">
       <div class="col-md-2 col-sm-2 col-xs-2 contains-thumb">
-        <span class="author-thumb"><span style="background-image: url('{{ page.author_thumb }}')"/></span>
+        <span class="author-thumb"><span style="background-image: url('{{ page.author_thumb }}')" /></span>
       </div>
       <div class="col-md-6 col-sm-10 col-xs-10">
         <p class="name">{{ page.author }}</p>
@@ -25,11 +26,12 @@ layout: blog-base
     <div class="row article-block">
       <div class="col-md-8 col-md-offset-2">
         <p class="date">{{ page.date | date: '%B %d, %Y' }}</p>
-        <hr/>
+        <hr />
         {{ content}}
       </div>
     </div>
-    </div>
   </div>
+  {% include blog-mailchimp-form.html %}
+</div>
 </div>
 </script>
