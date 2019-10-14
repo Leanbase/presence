@@ -45,17 +45,40 @@ div.blog-header {
   width: 100%;
   background-color: $col-l-teal;
 
+  a.top-bar {
+    font-family: $sans-font-family;
+    display: block;
+    background-color: $col-l-gray-3;
+    color: white;
+
+    padding: 4px 16px;
+    font-size: 14px;
+    line-height: 14px;
+
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+
+    p {
+      margin: 0; padding: 0;
+    }
+
+    &:hover {
+      background-color: $col-l-teal;
+      text-decoration: none;
+    }
+  }
+
   a {
     color: white;
   }
 
   a.logo {
     display: inline-block;
-    padding: 8px 0;
+    padding: 11px 16px;
     font-size: 24px; line-height: 24px;
 
     img {
-      height: 36px;
+      height: 22px;
     }
 
     &:hover {
@@ -70,6 +93,22 @@ div.blog-header {
       font-size: 16px; line-height: 16px;
       padding: 16px 0;
       margin-left: 12px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.header-link-cta {
+        border-radius: 4px;
+        background-color: #DFDEE4;
+        color: #000000;
+        font-size: 16px;
+        line-height: 20px;
+  
+        padding: 8px 24px;
+        margin: 8px;
+      }
     }
   }
 
@@ -192,7 +231,6 @@ div.blog-article {
     color: #212121;
     margin-top: 0;
     border-left: 4px solid $col-l-teal;
-    text-indent: 2em;
   }
 
   div.figure {
@@ -227,7 +265,7 @@ div.author-block {
   span.author-thumb {
     display: inline-block;
     vertical-align: middle;
-    width: 80px; max-width: 100%;
+    width: 75px; max-width: 140%;
 
     span {
       width: 100%;
@@ -328,7 +366,8 @@ div.offshore-index {
 
     span.date {
       flex: 0 0 auto;
-      display: inline-block;
+      // display: inline-block;
+      display: none;
 
       text-align: center;
       font-family: $sans-font-family;
@@ -356,14 +395,14 @@ div.offshore-index {
         font-family: $base-font-family;
         font-size: 16px;
         font-weight: 400;
-        margin: 0;
+        margin: 12px 0 8px;
       }
 
       h2.source {
         font-family: $sans-font-family;
         font-weight: 400;
         font-size: 14px;
-        margin: 0;
+        margin: 8px 0 12px;
         color: $col-l-gray-2;
       }
     }
