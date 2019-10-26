@@ -87,7 +87,7 @@ div.hero {
     margin: 0 0 15px 15px;
 
     h2 {
-      font-weight: 500;
+      font-weight: 600;
       color: $col-l-blue;
       font-family: "Work Sans";
       font-size: 16px;
@@ -140,7 +140,7 @@ div.targeted-features {
     text-align: center;
 
     h1 {
-      font-weight: 500;
+      font-weight: 600;
       color: $col-l-gray-3;
       font-size: 32px;
       line-height: 38px;
@@ -184,7 +184,7 @@ div.targeted-features {
       font-family: "Work Sans";
       font-size: 24px;
       line-height: 28px;
-      font-weight: 500;
+      font-weight: 600;
       text-decoration: none;
 
       &:hover, &:active {
@@ -294,8 +294,7 @@ div.screenshots {
 
   h1 {
     color: $col-l-gray-3;
-    font-family: "Work Sans";
-    font-weight: 500;
+    font-weight: 600;
     font-size: 24px;
     line-height: 28px;
   }
@@ -362,12 +361,74 @@ div.third-cta-section {
   h1 {
     color: $col-l-gray-3;
     opacity: 0.8;
-    font-family: "Work Sans";
-    font-weight: 500;
+    font-weight: 600;
     font-size: 32px;
     line-height: 38px;
     text-align: center;
   }
 
   @include pretty-signup-form();
+}
+
+div.contact-us {
+  min-height: 80vh;
+  background-image: url('/assets/images/contact-bg.svg');
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
+  div.container {
+    padding: 0 0 0 24px;
+  }
+
+  h1 {
+    color: $col-l-gray-3;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 35px;
+    margin: 42px 0px 18px -3px;
+  }
+
+  p {
+    margin: 18px 0;
+    color: $col-l-gray-3;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  a.email {
+    display: inline-block;
+    vertical-align: middle;
+    color: $col-l-teal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  a.copy {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    font-size: 14px;
+
+    color: $col-l-blue;
+    text-decoration: underline;
+  }
+
+  span.copied {
+    background: $col-l-gray-3;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 4px;
+
+    opacity: 1.0;
+    transition: opacity ease-in-out 0.4s;
+    font-size: 12px;
+
+    &.hide {
+      opacity: 0;
+    }
+  }
 }

@@ -1,0 +1,48 @@
+---
+layout: landing
+title: Feature Flagging for Faster Testing and Continous Delivery
+
+image: 
+  path: /assets/images/twitter-card.png
+  width: 600
+  height: 300
+---
+
+<div class="hero contact-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-xs-12">
+        <h1>Contacting Leanbase</h1>
+        <p>It couldn't be easier. Drop us an email.</p>
+        <p>
+          <a class="email" href="mailto:hi@leanbase.io">hi@leanbase.io</a>
+          <a href="javascript:copyEmail()" class="copy">copy</a>
+          <span id="email-copied-message" class="copied hide">Copied</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function (win) {
+    win.copyEmail = function copyEmail() {
+      // Copy
+      var el = document.createElement('textarea');
+      el.value = 'hi@leanbase.io';
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+
+
+      // Show copied message
+      var message = document.getElementById('email-copied-message');
+      message.classList.remove('hide');
+
+      setTimeout(function () {
+        message.classList.add('hide');
+      }, 5000);
+    };
+  })(window);
+</script>
