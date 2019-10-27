@@ -51,7 +51,7 @@ body {
 }
 
 div.hero {
-  h1.hero-header, h2.hero-header, h3.hero-header  {
+  .hero-header {
     font-size: 48px;
     font-weight: 800;
 
@@ -107,12 +107,11 @@ div.hero {
 
   .has-hero-illustration {
     background: url('/assets/images/undraw_timeline_9u4u.svg');
-    background-position: bottom center;
-    background-size: contain;
+    background-position: bottom right;
+    background-size: 400px;
     background-repeat: no-repeat;
 
-    height: calc(50vh + 100px);
-    max-height: 60vh;
+    height: 450px;
   }
 
   @include pretty-signup-form();
