@@ -51,16 +51,57 @@ body {
 }
 
 div.hero {
-  h1.hero-header {
+  h1.hero-header, h2.hero-header, h3.hero-header  {
     font-size: 48px;
-    color: $col-l-teal;
-    font-weight: 900;
-    margin: 0;
+    font-weight: 800;
 
     margin: 100px 0;
 
     @media (max-width: 986px) {
       text-align: center;
+    }
+
+    span.nl {
+      display: block;
+
+    }
+  }
+
+  .heroes-carousel {
+    font-size: 48px;
+    margin: 0;
+    overflow-y: hidden;
+
+    h1.hero-header {
+      margin: 0;
+
+      &:first-child {
+        transition: margin-top 0.4s ease-in-out;
+      }
+    }
+
+    &.top {
+      margin-top: 100px;
+      height: calc(1.5em);
+      color: $col-l-teal;
+    }
+
+    &.bottom {
+      margin-bottom: 100px;
+      height: calc(1.5em);
+      color: $col-l-gray-3;
+    }
+
+    &.first h1.hero-header:first-child {
+      margin-top: 0;
+    }
+
+    &.second h1.hero-header:first-child {
+      margin-top: -1.5em;
+    }
+
+    &.third h1.hero-header:first-child {
+      margin-top: -3em;
     }
   }
 
@@ -75,6 +116,13 @@ div.hero {
   }
 
   @include pretty-signup-form();
+
+  p.subtitle {
+    margin: 1em;
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+  }
 }
 
 @mixin feature-cards {
@@ -89,7 +137,6 @@ div.hero {
     h2 {
       font-weight: 600;
       color: $col-l-blue;
-      font-family: "Work Sans";
       font-size: 16px;
       line-height: 19px;
       min-height: 38px;
@@ -97,12 +144,12 @@ div.hero {
 
     p.feature-description {
       color: $col-l-gray-3;
-      font-family: "Work Sans";
       font-size: 16px;
       font-weight: 400;
       line-height: 29px;
     }
   }
+  
 }
 
 div.features-top {
@@ -181,7 +228,6 @@ div.targeted-features {
       text-align: center;
       padding: 25px 0;
       color: $col-l-gray-3;
-      font-family: "Work Sans";
       font-size: 24px;
       line-height: 28px;
       font-weight: 600;
@@ -301,7 +347,6 @@ div.screenshots {
 
   p.screenshot-description {
     color: $col-l-gray-2;
-    font-family: "Work Sans";
     font-size: 16px;
     line-height: 28px;
 
@@ -326,25 +371,16 @@ div.screenshots {
 
   div.screenshot {
     display: inline-block;
-    background-color: white;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: transparent;
+    padding-top: 61.5%; /* Approximates 16:9 Aspect Ratio */
     width: 100%;
     position: relative;
 
+    background-repeat: no-repeat;
+    background-size: contain;
+
     transition: margin-left 300ms ease-in;
     margin-left: 0;
-
-    &:first-child {
-      background-color: #c8d2ff9b;
-    }
-
-    &:nth-child(2) {
-      background-color: #c8ffea9b;
-    }
-
-    &:nth-child(3) {
-      background-color: #f9c8ff9b;
-    }
   }
 }
 

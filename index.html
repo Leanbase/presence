@@ -11,12 +11,88 @@ image:
 <div class="hero">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-        <h1 class="hero-header">Accelerate your product development with Continuous Delivery.</h1>
+      <div class="col-xs-12 hidden-lg hidden-md">
+        <h1 class="hero-header">Faster Feature Delivery. Reduced risk.</h1>
+        <p class="subtitle">Leanbase's Feature Management lets you test on production.</p>
+      </div>
+
+      <div class="col-md-9 hidden-sm hidden-xs">
+        <div id="hero-headers">
+          <h1 class="hero-header">Test directly on production <span class="nl">with Feature Management</span></h1>
+          <h2 class="hero-header">Eliminate all of your <span class="nl">Integration Environments</span></h1>
+          <h3 class="hero-header">Problem? Halt a feature <span class="nl">within seconds</span></h1>
+        </div>
+        <script>
+          (function (win) {
+            var headerContainer = document.getElementById('hero-headers');
+
+            var topEls = [];
+            var bottomEls = [];
+
+            // First, zip all headers into two sets. Top and Bottom. Doing this 
+            // in script and not in markup ensures search engines continue having
+            // the view that users do.
+            headerContainer
+              .querySelectorAll('.hero-header')
+              .forEach(function (hero) {
+                var topEl = document.createElement('h1');
+                topEl.classList.add('hero-header');
+                topEl.textContent = hero.childNodes[0].textContent;
+                topEls.push(topEl);
+
+                var bottomEl = document.createElement('h1');
+                bottomEl.classList.add('hero-header');
+                bottomEl.textContent = hero.children[0].textContent;
+                bottomEls.push(bottomEl);
+              });
+
+            // Now, add them to their own carouselling divs
+            var topCar = document.createElement('div');
+            topCar.classList.add('heroes-carousel', 'top', 'first');
+            topEls.forEach(function (el) {
+              topCar.append(el);
+            });
+            headerContainer.parentElement.insertBefore(topCar, headerContainer);
+
+            var bottomCar = document.createElement('div');
+            bottomCar.classList.add('heroes-carousel', 'bottom', 'first');
+            bottomEls.forEach(function (el) {
+              bottomCar.append(el);
+            });
+            headerContainer.parentElement.insertBefore(bottomCar, headerContainer);
+
+            // Utility methods to animate
+            function show(num) {
+              var toAdd = [
+                'first', 'second', 'third'
+              ][num];
+
+              var toRemove = [
+                ['second', 'third'],
+                ['first', 'third'],
+                ['first', 'second'],
+              ][num];
+
+              [topCar, bottomCar].forEach(function (car) {
+                car.classList.remove(toRemove[0], toRemove[1]);
+                car.classList.add(toAdd);
+              });
+            }
+
+            var current = 0;
+            setInterval(function () {
+              current = (current + 1) % 3;
+              show(current);
+            }, 3000);
+
+            // Now hide the original divs.
+            headerContainer.style.display = 'none';
+          })(window);
+        </script>
 
         {% include signup.html %}
       </div>
-      <div class="does-not-has-hero-illustration col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <div class="does-not-has-hero-illustration hidden-sm hidden-xs col-md-3 col-xs-12">
       </div>
     </div>
   </div>
@@ -211,42 +287,44 @@ image:
         <div id="screenshots-tab-container" class="tab-container reveal-1">
           <div class="tab-selector">
             <ul>
-              <li id="timeline-tab" data-target="timeline" class="tab-anchor"></li>
-              <li id="integration-tab" data-target="integration" class="tab-anchor"></li>
-              <li id="intuitive-tab" data-target="intuitive" class="tab-anchor"></li>
+              <li id="a-tab" data-target="a" class="tab-anchor"></li>
+              <li id="b-tab" data-target="b" class="tab-anchor"></li>
+              <!-- <li id="c-tab" data-target="c" class="tab-anchor"></li> -->
             </ul>
           </div>
           <div class="tab-scroller">
-            <div class="tab" id="shots-tab-1">
+            <div class="tab" id="shots-tab-a">
+              <h1>Integration</h1>
+              <p class="screenshot-description">
+                Integration with leanbase is just a few lines of code. APIs and 
+                libraries for all major languages are available. With more coming 
+                out every week.
+              </p>
+            </div><!--
+         --><div class="tab" id="shots-tab-b">
+              <h1>Intuitive</h1>
+              <p class="screenshot-description">Leanbase is easy to use and
+                understand. <i>Anyone</i> on your team can manage features all 
+                the way into production.
+              </p>
+            </div>
+            <div class="tab" id="shots-tab-c">
               <h1>Timeline</h1>
               <p class="screenshot-description">
                 We believe in a high-alignment org. Your engineering, product & growth
                 teams could align better and have a shared knowledge space at leanbase
                 using the Timeline.
               </p>
-            </div><!--
-         --><div class="tab" id="shots-tab-2">
-              <h1>Integration</h1>
-              <p class="screenshot-description">
-                Integration with leanbase is just a few lines of code. We provide
-                SDKs and APIs for every platform you need.
-              </p>
-            </div><!--
-         --><div class="tab" id="shots-tab-3">
-              <h1>Intuitive</h1>
-              <p class="screenshot-description">
-                Achieve mastery in minutes. Leanbase is easy to understand and
-                navigate. You’ll be experimenting everything in no time!
-              </p>
             </div>
           </div>
         </div>
+
       </div>
       <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
         <div id="shot-scroller" class="shot-scroller">
-          <div id="shot-1" class="screenshot">&nbsp;</div><!--
-       --><div id="shot-2" class="screenshot">&nbsp;</div><!--
-       --><div id="shot-3" class="screenshot" style="background: url('assets/images/screenshot-features.png');">&nbsp;</div>
+          <div id="shot-a" class="screenshot" style="background-image: url('assets/images/shot-integration.png');">&nbsp;</div><!--
+        --><div id="shot-b" class="screenshot" style="background-image: url('assets/images/shot-intuitive.png');">&nbsp;</div><!--
+        --><div id="shot-c" class="screenshot">&nbsp;</div>
         </div>
       </div>
     </div>
@@ -262,28 +340,28 @@ image:
 
       // scroll descriptions to appropriate pos.
       var tabContainer = document.getElementById('screenshots-tab-container');
-      if (tabName === 'timeline') {
+      if (tabName === 'a') {
         tabContainer.classList.add('reveal-1');
         tabContainer.classList.remove('reveal-2');
         tabContainer.classList.remove('reveal-3');
-      } else if (tabName === 'integration') {
+      } else if (tabName === 'b') {
         tabContainer.classList.remove('reveal-1');
         tabContainer.classList.add('reveal-2');
         tabContainer.classList.remove('reveal-3');
-      } else if (tabName === 'intuitive') {
+      } else if (tabName === 'c') {
         tabContainer.classList.remove('reveal-1');
         tabContainer.classList.remove('reveal-2');
         tabContainer.classList.add('reveal-3');
       }
 
       var shotsScroller = document.getElementById('shot-scroller');
-      if (tabName === 'timeline') {
+      if (tabName === 'a') {
         shotsScroller.classList.remove('reveal-2');
         shotsScroller.classList.remove('reveal-3');
-      } else if (tabName === 'integration') {
+      } else if (tabName === 'b') {
         shotsScroller.classList.add('reveal-2');
         shotsScroller.classList.remove('reveal-3');
-      } else if (tabName === 'intuitive') {
+      } else if (tabName === 'c') {
         shotsScroller.classList.remove('reveal-2');
         shotsScroller.classList.add('reveal-3');
       }
