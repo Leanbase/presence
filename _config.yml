@@ -12,7 +12,10 @@ plugins:
   - jekyll-seo-tag
 
 collections:
-  - offshore_articles
+  offshore_articles:
+  docs:
+    output: true
+    permalink: "/:collection/"
 
 # SEO Stuff
 twitter:

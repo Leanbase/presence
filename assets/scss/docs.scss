@@ -1,0 +1,135 @@
+---
+---
+@import 'colors';
+
+$sans-font-family: 'Muli', arial;
+
+body.docs {
+  margin: 0; padding: 0;
+  font-family: $sans-font-family;
+  font-size: 16px;
+}
+
+div.header {
+  background-color: $col-l-gray-3;
+
+  a.logo {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 0;
+
+    img {
+      height: 40px;
+    }
+  }
+}
+
+div.breadcrumbs-wrapper {
+  border-bottom: 1px solid $col-l-gray-1;
+  font-size: 14px;
+  padding: 7px 0;
+
+  ul {
+    list-style-type: none;
+    display: block;
+    margin: 0; padding: 0;
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+      margin: 0; padding: 0;
+
+      &:after {
+        content: '»';
+        font-size: 16px;
+        color: $col-l-gray-2;
+        display: inline-block;
+        margin: 0 2px;
+      }
+
+      &:last-child {
+        &:after {
+          content: '';
+        }
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: $col-l-teal;
+    padding: 5px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid $col-l-gray-1;
+      text-decoration: none;
+    }
+
+    &.disabled {
+      color: $col-l-gray-2;
+      cursor: default;
+
+      &:hover {
+        border: 1px solid transparent;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+div.sidebar {
+  padding-top: 60px;
+  border-right: 1px solid $col-l-gray-1;
+
+  h2 {
+    color: $col-l-gray-3;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 0 0 9px 4.5px;
+  }
+
+  ul {
+    display: block;
+    margin: 0 0 45px;
+    padding: 0;
+
+    li {
+      display: block;
+      list-style-type: none;
+
+      color: $col-l-gray-3;
+      font-size: 14px;
+      line-height: 18px;
+
+      a {
+        display: block;
+        padding: 4.5px;
+        text-decoration: none;
+        color: $col-l-gray-3;
+
+        &:hover {
+          color: $col-l-teal;
+        }
+
+        &.active {
+          background-color: $col-l-gray-3;
+          border-radius: 3px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+div.doc-article {
+  h1.page-title {
+    color: $col-l-gray-3;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 40px 0;
+  }
+}

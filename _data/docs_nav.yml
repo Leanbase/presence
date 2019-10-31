@@ -1,0 +1,9 @@
+- title: Getting Started
+  home_link: /docs/
+  items:
+    - link: /docs/
+    - link: /docs/getting-started/inviting-your-team/
+- title: Server Side SDK Reference
+  home_link: /docs/server-side-sdk/
+  items:
+    - link: /docs/server-side-sdk/python/

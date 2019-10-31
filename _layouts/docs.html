@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+
+    {% include analytics.html %}
+
+    <link rel="stylesheet" href="/assets/css/bootstrap-grid.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/scss/docs.css">
+    <link rel="icon" href="/favicon.png" type="image/png">
+
+    <meta property="og:image" content="https://leanbase.io/assets/images/logo-with-text-square.png" />
+
+    {% seo %}
+  </head>
+  <body class="docs">
+    {% include docs-header.html %}
+
+    <div class="breadcrumbs-wrapper">
+      <div class="container">
+        <div class="row">
+          <div id="breadcrumbs" class="col-12">
+            <ul class="crumbs">
+              <li>
+                <a href="/docs/">Docs</a>
+              </li>
+              {% for section in site.data.docs_nav %}
+              {% for item in section.items %}
+              {% if item.link == page.url %}
+                <li>
+                  <a href="{{ section.home_link }}">{{ section.title }}</a>
+                </li>
+                <li>
+                  <a class="disabled">{{ page.title }}</a>
+                </li>
+              {% endif %}
+              {% endfor %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 sidebar">
+          {% for section in site.data.docs_nav %}
+            <h2>{{ section.title }}</h2>
+            <ul>
+              {% for item in section.items %}
+                {% assign p = site.documents | where: "url", item.link | first %}
+                <li><a href="{{p.url}}">{{ p.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </div>
+        <div class="col-md-6 doc-article">
+          <h1 class="page-title">{{ page.title }}</h1>
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    {% include docs-footer.html %}
+  </body>
+</html>
