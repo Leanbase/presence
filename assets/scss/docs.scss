@@ -1,6 +1,7 @@
 ---
 ---
 @import 'colors';
+@import 'monokai-code';
 
 $sans-font-family: 'Muli', arial;
 
@@ -78,9 +79,12 @@ div.breadcrumbs-wrapper {
   }
 }
 
+div.content-row {
+  justify-content: stretch;
+}
+
 div.sidebar {
   padding-top: 60px;
-  border-right: 1px solid $col-l-gray-1;
 
   h2 {
     color: $col-l-gray-3;
@@ -89,6 +93,15 @@ div.sidebar {
     line-height: 18px;
     text-transform: uppercase;
     margin: 0 0 9px 4.5px;
+
+    a {
+      color: $col-l-gray-3;
+
+      &:hover {
+        text-decoration: none;
+        color: $col-l-teal;
+      }
+    }
   }
 
   ul {
@@ -125,11 +138,80 @@ div.sidebar {
 }
 
 div.doc-article {
+  color: $col-l-gray-3;
+  border-left: 1px solid $col-l-gray-1;
+  padding-left: 30px;
+  padding-bottom: 150px;
+  
   h1.page-title {
     color: $col-l-gray-3;
     font-weight: 400;
     font-size: 32px;
     line-height: 40px;
     margin: 40px 0;
+  }
+
+  h1, h2, h3, h4, h5, h5 {
+    font-weight: 600;
+  }
+
+  // Rhythm begins. Sourced from : https://github.com/matejlatin/Gutenberg/blob/master/src/style/gutenberg.css
+  h1 {
+    font-size: 40px;
+    line-height: 52px;
+    margin-top: 104px;
+    margin-bottom: 26px;
+  }
+  
+  h2 {
+    font-size: 27px;
+    line-height: 39px;
+    margin-top: 65px;
+    margin-bottom: 13px;
+  }
+  
+  h3 {
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 52px;
+    margin-bottom: 13px;
+  }
+  
+  h4 {
+    font-size: 19.2px;
+    line-height: 26px;
+    margin-top: 39px;
+    margin-bottom: 13px;
+  }
+  
+  h5 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 65px;
+    margin-bottom: 13px;
+  }
+  
+  h6 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 65px;
+    margin-bottom: 13px;
+  }
+  // Rhythm ends
+
+  p {
+    line-height: 1.75em;
+  }
+
+  li {
+    margin-bottom: 0.75em;
+  }
+
+  .highlighter-rouge {
+    margin: 20px 0;
+
+    pre {
+      padding: 8px;
+    }
   }
 }

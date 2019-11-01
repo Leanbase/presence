@@ -8,7 +8,7 @@
     {% include analytics.html %}
 
     <link rel="stylesheet" href="/assets/css/bootstrap-grid.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600,800" rel="stylesheet">
     <link rel="stylesheet" href="/assets/scss/docs.css">
     <link rel="icon" href="/favicon.png" type="image/png">
 
@@ -28,6 +28,13 @@
                 <a href="/docs/">Docs</a>
               </li>
               {% for section in site.data.docs_nav %}
+
+              {% if page.url != '/docs/' and section.home_link == page.url %}
+                <li>
+                  <a class="disabled">{{ section.title }}</a>
+                </li>
+              {% endif %}
+
               {% for item in section.items %}
               {% if item.link == page.url %}
                 <li>
@@ -46,10 +53,10 @@
     </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row content-row">
         <div class="col-md-3 sidebar">
           {% for section in site.data.docs_nav %}
-            <h2>{{ section.title }}</h2>
+            <h2><a href="{{ section.home_link}}">{{ section.title }}</a></h2>
             <ul>
               {% for item in section.items %}
                 {% assign p = site.documents | where: "url", item.link | first %}
