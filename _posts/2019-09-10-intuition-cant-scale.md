@@ -7,6 +7,7 @@ author: Dipanjan Mukherjee
 author_bio: Staff Writer, Founder at Leanbase
 author_thumb: /assets/blog-images/authors/dipanjan.jpg
 excerpt_separator: <!--more-->
+categories: [startup-advice,feature-management]
 ---
 
 You have studied your market for years now. Had interviews with so many customers, you can't remember their names. Found a niche and developed a product addressing their needs. You _intuitively_ know what is right. What will click, what will bomb... But does your team understand?

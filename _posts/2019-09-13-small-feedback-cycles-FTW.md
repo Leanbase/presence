@@ -7,6 +7,7 @@ author: Dipanjan Mukherjee
 author_bio: Staff Writer, Founder at Leanbase
 author_thumb: /assets/blog-images/authors/dipanjan.jpg
 excerpt_separator: <!--more-->
+categories: [startup-advice,feature-management]
 ---
 
 How long does it take for you to lose interest in your idea? How long if it was someone else's? What is the cost of having a low learning rate?
