@@ -299,6 +299,21 @@ div.author-block {
   }
 }
 
+div.categories-block {
+  margin-bottom: 10px;
+
+  span.category {
+    display: inline-block;
+    padding: 4px 12px;
+    background: $col-l-lightblue-20;
+    border-radius: 4px;
+    color: $col-l-gray-3;
+    font-family: $sans-font-family;
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 4px;
+  }
+}
 div.blog-index {
   margin-top: 20px;
 
@@ -309,13 +324,17 @@ div.blog-index {
   }
 
   a.link-to-post {
+    display: block;
     font-size: 14px;
     color: $text-color;
     font-family: $sans-font-family;
     line-height: 1.25em;
+    transition: background-color 250ms ease-out;
+    padding: 8px;
 
     &:hover {
       text-decoration: none;
+      background-color: $col-l-gray-1-05;
     }
   }
 
@@ -325,7 +344,7 @@ div.blog-index {
     font-size: 1.5em;
     font-weight: 300;
 
-    margin-top: 0em;
+    margin: 0em 0 4px;
     color: #212121;
   }
 }
