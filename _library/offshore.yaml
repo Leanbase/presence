@@ -1,0 +1,28 @@
+already_published_articles:
+  - 
+  link: https://www.crazyegg.com/blog/ab-testing-google-analytics/
+  authors: CrazyEgg
+  title: Your Step-by-Step Guide to A/B Testing with Google Optimize
+  pub_date: 2019-03-15
+  source: CrazyEgg Blog
+
+  -
+  link: https://neilpatel.com/blog/how-to-run-an-ab-test-in-google-analytics/
+  authors: Brad Smith
+  title: How to Run an A/B Test in Google Analytics
+  pub_date: 
+  source: NeilPatel.com Blog
+
+articles:
+  -
+  link: https://conversionxl.com/blog/ab-tests-fail/
+  source: ConversionXL Blog
+  authors: Dennis van der Heijden 
+  pub_date: 2014-08-28
+
+  -
+  link: https://conversionxl.com/blog/pulling-back-curtain-p-values-learned-love-small-data/
+  authors: Matt Gershoff
+  title: Pulling Back The Curtain on P-Values (or How I Learned To Love Small Data)
+  source: ConversionXL Blog
+  pub_date:  2014-05-13 
