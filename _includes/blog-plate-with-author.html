@@ -1,0 +1,23 @@
+<a class="link-to-post" href="{{ post.url }}">
+  <div class="hero" style="background-image: url('{{ post.hero }}'); padding-top: {{ post.hero_aspect }};"></div>
+  <h1>{{ post.title }}</h1>
+  <div class="author-block container-fluid">
+    <div class="row">
+      <div class="contains-thumb col-xs-2">
+        <span class="author-thumb">
+          <span style="background-image: url('{{ post.author_thumb }}')" />
+        </span>
+      </div>
+      <div class="col-xs-10">
+        <p class="name">{{ post.author }}</p>
+        <p class="bio">{{ post.author_bio }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="categories-block">
+    <img src="/assets/blog-images/tag-icon.png">
+    {% for category in post.categories %}
+      <a class="category">{{ category }}</a>
+    {% endfor %}
+  </div>
+</a>

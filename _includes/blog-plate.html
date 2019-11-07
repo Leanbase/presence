@@ -1,0 +1,17 @@
+<a class="link-to-post" href="{{ post.url }}">
+  <div class="hero" style="background-image: url('{{ post.hero }}'); padding-top: {{ post.hero_aspect }};">
+  </div>
+  
+  <h1>{{ post.title }}</h1>
+
+  <div class="categories-block">
+    <img src="/assets/blog-images/tag-icon.png">
+    {% for category in post.categories %}
+      <span class="category">{{ category }}</span>
+    {% endfor %}
+  </div>
+
+  <div class="excerpt">
+    {{ post.excerpt }}
+  </div>
+</a>
