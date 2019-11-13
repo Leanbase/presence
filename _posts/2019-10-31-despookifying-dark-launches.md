@@ -16,7 +16,7 @@ Do you feel butterflies in your stomach when you are shipping out a large change
 
 Is all of this stress really necessary? Do we need to orchestrate all the teams to deploy together? Isn't the release date the worst time to surface bugs?
 
-With continous delivery now taking off, product teams can reduce their stress, increase the reliability of their systems and push out more features, faster.
+With continuous delivery now taking off, product teams can reduce their stress, increase the reliability of their systems and push out more features, faster.
 
 A dark launch is where you let a small group of users (chosen or random) have access to a feature _before_ the feature is available to all users.
 
