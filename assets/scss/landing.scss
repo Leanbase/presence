@@ -477,3 +477,136 @@ div.contact-us {
     }
   }
 }
+
+div.plp {
+  a.cta {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 7px 30px;
+    border-radius: 17px;
+    background-color: $col-l-teal;
+    color: white;
+    box-shadow: 0 12px 12px -7px rgba(89,196,255,0.5);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  div.hero-swoosh {
+    background-image: url('/assets/images/pm-plp-hero-swoosh.png');
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  div.hero-area {
+    margin-bottom: 200px;
+
+    > div {
+      margin-top: 75px; 
+    }
+
+    div.caption {
+        color: $col-l-gray-3;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    h1.hero-text {
+      margin-top: 2px; margin-bottom: 8px;
+      color: $col-l-teal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 42px;
+    }
+
+    p.subtitle {
+      color: $col-l-gray-3;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      text-align: left;
+      margin: 0; padding: 0;
+    }
+
+    img.hero-illustration {
+      border-top: 1px solid #009bA3;
+      background-color: rgba(0,155,163,0.05);
+      box-shadow: 0 14px 41px -20px #009BA3;
+    }
+  }
+
+  .post-hero-gradient {
+    background-image: url('/assets/images/pm-plp-post-header-gradient.png');
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: contain;
+  }
+
+  div.post-hero-cta-section {
+    margin-top: -100px;
+
+    div.banner {
+      padding: 42px;
+      border-radius: 20px;
+      background-color: #FFFFFF;
+      box-shadow: 0 9px 20px -12px rgba(50,45,75,0.6);
+
+      text-align: center;
+
+      p.message {
+        margin: 20px auto;
+        max-width: 504px;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+      }
+    }
+  }
+  
+  div.feature-wrapper {
+    margin: 140px 0;
+
+    h2 {
+      color: $col-l-teal;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 30px;
+    }
+
+    p {
+      color: $col-l-gray-3;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    img {
+      max-width: 100%;
+      border: 1px solid #E7E6EB;
+    }
+
+    &.text-on-right {
+      .img-cell {
+        text-align: right;
+      }
+    }
+  }
+
+  div.pre-footer-swoosh {
+    height: 500px;
+    background-image: url('/assets/images/pm-plp-pre-footer-swoosh.png');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  div.pre-footer-cta-section {
+    background-color: rgba(0,145,255,0.4);
+    padding-bottom: 120px;
+  }
+}
