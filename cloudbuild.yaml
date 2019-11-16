@@ -1,7 +1,7 @@
 steps:
 - name: jekyll/jekyll:4
-  entrypoint: bundle
-  args: ['exec', 'jekyll', 'build']
+  entrypoint: jekyll
+  args: ['build']
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: gsutil
   args: ["-m", "rsync", "-r", "-c", "-d", "./_site", "gs://example.com"]
