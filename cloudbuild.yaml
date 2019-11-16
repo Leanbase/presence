@@ -1,5 +1,7 @@
 steps:
-- name: jekyll/jekyll:4
+- name: jekyll/jekyll:latest
+  env:
+    - 'JEKYLL_VERSION=3.8'
   entrypoint: jekyll
   args: ['build']
 - name: gcr.io/cloud-builders/gcloud
