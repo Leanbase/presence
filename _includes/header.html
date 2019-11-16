@@ -1,10 +1,13 @@
 <div class="header">
   <div class="container">
     <div class="row">
-      <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12">
+      <div class="col-md-2 col-xs-4">
         <a class="logo" href="/"><img src="/assets/images/logo-full.svg" alt="leanbase"></a>
       </div>
-      <div class="col-md-4 col-md-offset-6 col-sm-12 col-xs-12 header-links text-right">
+      <div class="mob-header-button hidden-md">
+        <a id="reveal-header-links" href="#">&#9776;</a>
+      </div>
+      <div id="header-links" class="col-md-4 col-md-offset-6 header-links hidden-xs">
         <a class="header-link" href="/docs/">Docs</a>
         <a class="header-link" href="/blog/">Blog</a>
         <a class="header-link primary" href="javascript:slideSignupIn('');">Signup</a>
@@ -12,3 +15,35 @@
     </div>
   </div>
 </div>
+
+<script>
+  (function (win) {
+    var link = document.getElementById('reveal-header-links');
+    var links = document.getElementById('header-links');
+
+    function showHeaderBlock() {
+      links.classList.remove('hidden-xs', 'header-links');
+      links.classList.add('header-links-block');
+
+      link.innerHTML = 'X';
+    }
+    
+    function hideHeaderBlock() {
+      links.classList.remove('header-links-block');
+      links.classList.add('hidden-xs', 'header-links');
+
+      link.innerHTML = '&#9776;';
+    }
+    
+    var shown = false;
+    link.onclick = function () {
+      if (shown) {
+        shown = false;
+        hideHeaderBlock();
+      } else {
+        shown = true;
+        showHeaderBlock();
+      }
+    }
+  })(window);
+</script>
