@@ -14,13 +14,15 @@
   .header-links {
     text-align: right;
 
-    a.header-link {
+    span.header-menu, a.header-link {
       display: inline-block;
       padding: 10px 20px;
       color: $col-l-teal;
       text-decoration: none;
       border-bottom: 2px solid transparent;
+    }
 
+    a.header-link {
       &:hover {
         color: $col-l-blue;
         border-bottom: 2px solid $col-l-blue;
@@ -36,19 +38,55 @@
         }
       }
     }
+
+    span.header-menu {
+      position: relative;
+
+      div.flyout {
+        display: none;
+        position: absolute;
+        top: 100%; left: -25%;
+        z-index: 2; width: 200px;
+        box-shadow: 0 14px 41px -20px #009BA3;
+        background-color: white;
+        border-bottom: 1px solid $col-l-teal;
+
+        a.header-link {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      &:hover {
+        div.flyout {
+          display: block;
+        }
+      }
+    }
   }
 
   .header-links-block {
-    width: 100vw;
     box-shadow: 0 14px 41px -20px #009BA3;
     padding-top: 20px;
 
     a.header-link {
       display: block;
-      text-decoration: underline;
-      font-size: 18px;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 15px;
+    }
 
-      padding: 20px;
+    span.header-menu {
+      label {
+        color: $col-l-gray-3;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 15px;
+      }
+    }
+
+    div.flyout {
+      border-bottom: 1px solid $col-l-teal;
     }
   }
 
