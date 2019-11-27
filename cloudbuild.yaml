@@ -1,4 +1,7 @@
 steps:
+# First, touch a gemfile so that cloud build can write to it.
+- name: 'ubuntu'
+  args: ['touch', './Gemfile.lock']
 - name: jekyll/jekyll:latest
   env:
     - 'JEKYLL_VERSION=3.8'
