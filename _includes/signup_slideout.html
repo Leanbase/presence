@@ -4,12 +4,11 @@
 
     <h1>Let's create your account on Leanbase</h1>
 
-    <form>
+    <form method="GET" action="{{ page.lbapp_url }}accounts/signup/">
+      <input type="hidden" name="command" value="prefill_email">
       <label for="signup-slideout-email">Work email</label>
-      <input type="text" name="email" id="signup-slideout-email"/>
-      <button class="form-cta">Signup</button>
-      <p class="subtext">We'll send you an email later to set a password or
-      connect your Slack/Google account.</p>
+      <input id="signup-slideout-email" type="email" autocomplete="email" name="email" placeholder="name@workplace.com">
+      <input type="submit" class="form-cta" value="Signup">
     </form>
 
     <div class="bottom-alternate">
