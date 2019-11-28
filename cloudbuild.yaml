@@ -8,6 +8,9 @@ steps:
 - name: alpine
   entrypoint: mkdir
   args: ['-p', './_site']
+- name: alpine
+  entrypoint: chmod
+  args: ['777', './_site']
 - name: jekyll/jekyll:latest
   entrypoint: bundle
   args: ['exec', 'jekyll', 'build']
