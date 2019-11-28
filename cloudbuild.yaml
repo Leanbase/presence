@@ -1,9 +1,6 @@
 steps:
 - name: jekyll/jekyll:latest
   entrypoint: bundle
-  args: ['install']
-- name: jekyll/jekyll:latest
-  entrypoint: bundle
   args: ['exec', 'jekyll', 'build']
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: gsutil
