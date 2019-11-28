@@ -5,6 +5,9 @@ steps:
   volumes:
   - name: 'bundle_storage'
     path: '/usr/local/bundle'
+- name: alpine
+  entrypoint: mkdir
+  args: ['-p', './_site']
 - name: jekyll/jekyll:latest
   entrypoint: bundle
   args: ['exec', 'jekyll', 'build']
