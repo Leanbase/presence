@@ -2,9 +2,15 @@ steps:
 - name: jekyll/jekyll:latest
   entrypoint: bundle
   args: ['install']
+  volumes:
+  - name: 'bundle_storage'
+    path: '/usr/local/bundle'
 - name: jekyll/jekyll:latest
   entrypoint: bundle
   args: ['exec', 'jekyll', 'build']
+  volumes:
+  - name: 'bundle_storage'
+    path: '/usr/local/bundle'
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: gsutil
   args: ["-m", "rsync", "-r", "-c", "-d", "./_site", "gs://example.com"]
