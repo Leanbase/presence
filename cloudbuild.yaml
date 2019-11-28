@@ -17,10 +17,8 @@ steps:
   volumes:
   - name: 'bundle_storage'
     path: '/usr/local/bundle'
-- name: gcr.io/cloud-builders/gcloud
-  entrypoint: gsutil
-  args: ["-m", "rsync", "-r", "-c", "-d", "./_site", "gs://example.com"]
 - name: 'gcr.io/cloud-builders/gsutil'
+  entrypoint: gsutil
   args: ['-m', 'rsync', '-r', './_site', 'gs://www.leanbase.io']
 options:
   env:
